@@ -19,6 +19,10 @@ public class UserController {
 		List<User> users = userService.findAllUsers();
 		System.out.println("users"+users.size());
 		model.addAttribute("users", users);
-		return "users";
+		return "view/users";
+	}
+	@RequestMapping("/base")
+	public String getBase(Model model){
+		return "layout/base";
 	}
 }
