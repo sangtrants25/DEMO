@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default">
+<head>
+    <title>Users</title>
+</head>
+<body>
+<div class="section no-pad-bot" layout:fragment="content">
+    <table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Unique Item Code</th>
+            <th>Item Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="user : ${users}">
+            <td><label type="text"
+                    th:text="${user.id}" /></td>
+            <td><label type="text"
+                    th:text="${user.username}" /></td>
+            <td><label type="text"
+                    th:text="${user.email}" /></td>
+        </tr>
+    </tbody>                            
+</table>
+</div>
+</body>
+</html>
