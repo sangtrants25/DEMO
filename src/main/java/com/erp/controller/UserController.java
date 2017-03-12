@@ -14,11 +14,11 @@ import com.erp.model.User;
 public class UserController {
 	@Autowired
 	private UserService userService;
-	@RequestMapping("/getUser")
+	@RequestMapping("/user")
 	public String getUsers(Model model){
-		List<User> users = userService.findAllUsers();
+		/*List<User> users = userService.findAllUsers();
 		System.out.println("users"+users.size());
-		model.addAttribute("users", users);
+		model.addAttribute("users", users);*/
 		return "view/users";
 	}
 	@RequestMapping("/base")
