@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/base">
+<head>
+<!-- The jQuery library is a prerequisite for all jqSuite products -->
+<!-- <script type="text/ecmascript" src="../../../js/jquery.min.js"></script>  -->
+<!-- We support more than 40 localizations -->
+<script type="text/ecmascript" src="js/trirand/i18n/grid.locale-en.js"></script>
+<!-- This is the Javascript file of jqGrid -->
+<script type="text/ecmascript" src="js/trirand/jquery.jqGrid.min.js"></script>
+<!-- This is the localization file of the grid controlling messages, labels, etc. -->
+<!-- A link to a jQuery UI ThemeRoller theme, more than 22 built-in and many more custom -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">  -->
+<!-- The link to the CSS that the grid needs -->
+<link rel="stylesheet" type="text/css" media="screen"
+	href="css/trirand/ui.jqgrid-bootstrap.css" />
+<script>
+	$.jgrid.defaults.width = 1024;
+</script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+<script src="js/app/CustomerDetail.js"></script>
+<title>jqGrid Loading Data - Million Rows from a REST service</title>
+</head>
+<body>
+	<div class="section no-pad-bot" layout:fragment="content">
+
+		<div class="box box-primary">
+			<div class="box-header with-border">
+				<h3 class="box-title">Quick Example</h3>
+			</div>
+			<!-- /.box-header -->
+			<!-- form start -->
+			<form role="form">
+				<div class="box-body">
+					<div class="form-group">
+						<label for="CustomerName">Customer Name</label> <input
+							class="form-control" id="CustomerName"
+							placeholder="Enter customer name" />
+					</div>
+					<div class="form-group">
+						<label for="CustomerNo">Customer No</label> <input
+							class="form-control" id="CustomerNo"
+							placeholder="Enter customer No" />
+					</div>
+					<div class="form-group">
+						<label>Province</label> <select class="form-control">
+							<option>option 1</option>
+							<option>option 2</option>
+							<option>option 3</option>
+							<option>option 4</option>
+							<option>option 5</option>
+						</select>
+						<p class="help-block">Example block-level help text here.</p>
+					</div>
+					<div class="form-group">
+						<label>District</label> <select class="form-control">
+							<option>option 1</option>
+							<option>option 2</option>
+							<option>option 3</option>
+							<option>option 4</option>
+							<option>option 5</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Ward</label> <select class="form-control">
+							<option>option 1</option>
+							<option>option 2</option>
+							<option>option 3</option>
+							<option>option 4</option>
+							<option>option 5</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="Street">Street</label> <input class="form-control"
+							id="Street" placeholder="Street" />
+					</div>
+					<div class="checkbox">
+						<label> <input type="checkbox" /> Check me out
+						</label>
+					</div>
+				</div>
+				<!-- /.box-body -->
+
+				<div class="box-footer">
+					<button type="submit" class="btn btn-primary" onclick="SaveChanges()" >Save changes</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
